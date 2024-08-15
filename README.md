@@ -23,6 +23,9 @@ This software uses all the dependencies listed above which require python to run
 Contact Information
 
 Here is my contact information
+
 Phone number:+250794206049
+
 Email:ambazasem64@gmail.com
+
 Linkedin : Ambaza Sem
