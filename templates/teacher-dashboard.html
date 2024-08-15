@@ -1,0 +1,68 @@
+{%extends 'base.html'%}
+{%block head%}
+{{super()}}
+<link rel="stylesheet" href="{{url_for('static',filename='teacher-dashboard.css')}}">
+
+{%endblock head%}
+{%block navbar%}
+{{super()}}
+{%endblock navbar%}
+
+{% block content %}
+<div class="space-x"></div>
+<div class="row show-grid">
+    <div class="col-lg-9">
+        <h1 class="title"> welcome back {{name}}</h1>
+    </div>
+    <div class="col-lg-3">
+        <form action="{{url_for('logout')}}">
+            <button class="title log-out-btn">log out</button>
+        </form>
+        
+    </div>
+</div>
+
+<div class="space-2x"></div>
+<div class="row show-grid">
+    <div class="col-lg-4 dash-cols">
+        <div class="dash-info">
+        <h4 class='dash-text'>View students information</h4>
+        <p class='dash-text'>View students information</p>
+        <p class='dash-text'>and analyse it</p>
+        <p class='dash-text'>in the dashboard</p>
+        <form action="{{url_for('students_dashboard')}}">
+            <button class="buttons"  method='POST' >View Student Info</button>
+        </form>
+    </div>
+    </div>
+    <div class="col-lg-4 dash-cols">
+    <div class="dash-info">
+        <h4 class='dash-text'>Register students</h4>
+        <p class='dash-text'>Register new students</p>
+        <p class='dash-text'>and update their data</p>
+        <p class='dash-text'>with the past school</p>
+        <form action="{{ url_for('register') }}">
+            <button class="buttons"  method='POST' >Register student</button>
+        </form>
+        
+    </div>
+    </div>
+    <div class="col-lg-4 dash-cols">
+    <div class="dash-info">
+        <h4 class='dash-text'>Update students data</h4>
+        <p class='dash-text'>Add students marks</p>
+        <p class='dash-text'>Delete students</p>
+        <p class='dash-text'>Professionally</p>
+        <form action="{{ url_for('add_marks') }}">
+        <button class="buttons" >Add Marks</button>
+    </form>
+        <div class="dash-text"></div>
+        <form action="{{url_for('delete_student')}}">
+            <button class="buttons" >Delete Student</button>
+        </form>
+        
+    
+    </div>
+    </div>
+</div>
+{% endblock content %}

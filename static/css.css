@@ -1,0 +1,42 @@
+.footer {
+    background-color:  rgb(51, 51, 51);
+    height: 100%;
+    filter: hue-rotate(15deg);
+}
+.header {
+    background-color:  rgb(51, 51, 51);
+    padding-top: 10px;
+    padding-left: 10px;
+    /*border-radius: 20px 0px 20px 0px;*/
+    padding-bottom: 10px;
+    filter: hue-rotate(15deg);
+}
+.logo {
+    width: 40px;
+    height: auto;
+}
+.footer-text {
+    color: rgb(230, 224, 224);
+    font-size: large;
+    text-align: center;
+    padding: 10px;
+}
+a .info-links:hover {
+    text-decoration: underline;
+}
+a .info-links {
+    text-decoration: none;
+}
+.content {
+    background-color: rgb(245, 245, 245);
+    padding-bottom: 10px;
+}
+
+.space-x{
+        padding: 20px;
+        background-color: rgb(245, 245, 245);
+    }       
+.space-2x{
+        padding: 50px;
+        background-color: rgb(245, 245, 245);
+}

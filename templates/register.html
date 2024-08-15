@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    {% extends "base.html" %}
+    {% block head %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{url_for('static',filename='register.css')}}">
+    {% endblock head %}
+    {% block content %}
+    <div class="space-x"></div>
+    <h1 class="title">Register a new student</h1>
+    <div class="space-x"></div>
+    <div class="space-x"></div>
+    <div class="container-1">
+        <div class="center-flex form">
+            <form method='POST' action="{{ url_for('register') }}">
+                {{ form.hidden_tag() }}
+                <p class="title-2">Enter student data</p>
+                <div class="space-in-form"></div>
+                <p >
+                    {{ form.firstname(size=30)}}
+                </p>
+                {% if form.firstname.errors %}
+                <ul class="errors">
+                    {% for error in form.firstname.errors %}
+                    <li>{{ error }}</li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+                <div class="space-in-form"></div>
+                
+                <p>
+                    {{ form.lastname(size=30) }}
+                </p>
+                {% if form.lastname.errors %}
+                <ul class="errors">
+                    {% for error in form.lastname.errors %}
+                    <li>{{ error }}</li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+                <div class="space-in-form"></div>
+                <p >
+                    {{ form.marks(size=30)}}
+                </p>
+                {% if form.marks.errors %}
+                <ul class="errors">
+                    {% for error in form.marks.errors %}
+                    <li>{{ error }}</li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+                <div class="space-in-form"></div>
+                
+                
+                <div class="submit-button">
+                    <p>
+                        <input type="submit" value="Register" class="submit-btn">
+                    </p>
+                   
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="space-x"></div>
+    {% endblock content %}
+</html>

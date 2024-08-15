@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    {% extends "base.html" %}
+    {% block head %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{url_for('static',filename='signup.css')}}">
+    {% endblock head %}
+    {% block content %}
+    <div class="space-x"></div>
+    <h1 class="title">Welcome to SDS</h1>
+    <div class="space-x"></div>
+    <div class="space-x"></div>
+    <div class="container-1">
+        <div class="center-flex form">
+            <form method='POST' action="{{ url_for('signup') }}">
+                {{ form.hidden_tag() }}
+                <p class="title-2">Create your sds account</p>
+                <div class="space-in-form"></div>
+                <p >
+                    {{ form.username(size=30)}}
+                </p>
+                {% if form.username.errors %}
+                <ul class="errors">
+                    {% for error in form.username.errors %}
+                    <li>{{ error }}</li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+                <div class="space-in-form"></div>
+                
+                <p>
+                    {{ form.password(size=30) }}
+                </p>
+                {% if form.password.errors %}
+                <ul class="errors">
+                    {% for error in form.password.errors %}
+                    <li>{{ error }}</li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+                <div class="space-in-form"></div>
+                <div class="submit-button">
+                    <p>
+                        <input type="submit" value="Sign up" class="submit-btn">
+                    </p>
+                    <p class="create-account">Already have an account?<a href="{{ url_for('login') }}" class="login-link">Log in</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="space-x"></div>
+    {% endblock content %}
+</html>

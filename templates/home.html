@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    {%extends 'base.html'%}
+    {%block head%}
+    {{super()}}
+    <link rel="stylesheet" href="{{url_for('static',filename='home.css')}}">
+    {%endblock head%}
+
+{%block content%}
+<body>
+    <!--div >
+        <h1 class="title container">hello</h1>
+    </div-->
+    <div class="design-space-x"></div>
+    <div class="description container">
+        <h1 class="description-text">welcome to <b>sds</b> the best student management system  </h1>
+        
+    </div>
+    <div class="space-x"></div>
+    <div class="row buttons">
+        <div class="col-lg-6 col-md-6 col-sm-6 button-login">
+            <form action="{{ url_for('login')}}">
+            <button class="buttons-bottom" type="submit">login</button>
+        </form>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 button-signup">
+            <form action="{{ url_for('signup')}}">
+            <button class="buttons-bottom" type="submit">sign up</button>
+        </form>
+        </div>
+    </div>
+
+    <div class="space-2x"></div>
+    <div class="row showgrid  ">
+        
+    <div class="container col-lg-4 descriptions-bottom">
+        <h1>keep info secure</h1>
+        <p>through our security mechanisms</p>
+        <p>that ensure only you</p>
+        <p>can access your data</p>
+
+    </div>
+    
+    <div class="container col-lg-4 descriptions-bottom"> 
+        <h1>Fast easy search</h1>
+        <p>due to a good search algorithm</p>
+        <p>and efficient database</p>
+        <p>to make search easy</p>      
+
+    </div>
+    <div class="container col-lg-4 descriptions-bottom">
+        <h1>Easy-to-use ui</h1>
+        <p>with good designs</p>
+        <p>dedicated to make using it</p>
+        <p>a worthwhile experience</p>
+    </div>
+    </div>
+    <div class="space-2x"></div>
+    <br/>
+
+</body>
+{%endblock content%}
+</html>

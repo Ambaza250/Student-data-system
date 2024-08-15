@@ -1,0 +1,34 @@
+{%extends "base.html"%}
+{%block head%}
+{{super()}}
+<link rel="stylesheet" href="{{url_for('static',filename='add marks.css')}}">
+{%endblock head%}
+{%block content%}
+<h1 class="title"><u>Students Dashboard</u></h1>
+
+<div class="parent">
+    <div class="row show-grid dashboard">
+        <div class="col-lg-4"><p><u><b>first name</b></u></p></div>
+        <div class="col-lg-4"><p><u><b>last name</b></u></p></div>
+        <div class="col-lg-4"><p><u><b>marks</b></u></p></div>
+    </div>
+
+        <form class="dashboard" action="{{ url_for('add_marks') }}" method="POST">
+        {% for student in students %}
+        <div class="row show-grid dashboard">
+            
+                <div class=" col-lg-4 "><div class="dashboard-show">{{ student.first_name }}</div></div>
+                <div class="col-lg-4"><div class="dashboard-show">{{ student.last_name }}</div></div>
+                <div class="col-lg-4"><div class="dashboard-show">
+                    <input type="text" name="marks_{{ student.id }}">
+                </div></div>
+                
+            </div>   
+        {% endfor %}
+        
+            <button type='submit' class="buttons">submit</button>
+        </form>
+    
+</div>
+
+{%endblock content%}

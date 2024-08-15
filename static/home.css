@@ -1,0 +1,40 @@
+.description{
+    background-color: 0px rgb(94, 94, 238) solid;
+    text-align: center;
+    
+}
+.button-login{
+    text-align: center;
+    padding-left: 10px;
+    width: 12px;
+    
+}
+.button-signup{
+    text-align: center;
+    padding-right: 10px;
+    width: 12px;
+    
+}
+.descriptions-bottom{
+    border: 0px solid;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+                    
+    
+}
+.text-bottom{
+    text-decoration: rgb(163, 234, 113);
+
+}
+.buttons-bottom{
+    background-color:  green;
+    width: 120px;
+    height:40px;
+    border:0cap;
+    border-radius: 15px;
+    filter: hue-rotate(15deg);
+}
+.buttons{
+    padding-bottom: 50px;
+}

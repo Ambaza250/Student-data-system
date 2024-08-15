@@ -1,0 +1,46 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block title %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Data System</title>
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+    {% endblock title %}
+    {% block head %}
+    <link rel="stylesheet" href="{{url_for('static',filename='css.css')}}">
+    {% endblock head %}
+
+    {{ bootstrap.load_css() }}
+</head>
+<body>
+    {% block navbar %}
+    <div class="header">
+        <img src="{{ url_for('static', filename='logo1.png', _external=True) }}" class="logo"/>
+    </div>
+    {% endblock navbar %}
+    <div class="content">
+        {% block content %}
+        {% endblock content %}
+    </div>
+    {% block footer %}
+    <div class="row showgrid footer">
+       
+        <div class="container col-lg-6">
+            <p class="footer-text"><u>partners</u></p>
+            <p class="footer-text">REB</p>
+            <p class="footer-text">SDMS</p>
+            <p class="footer-text">NESA</p>
+        </div>
+        <div class="container col-lg-6">
+            <p class="footer-text"><u>contacts</u></p>
+            <p class="footer-text">email: <a href='#' class="info-links">info@sds.com</a></p>
+            <p class="footer-text">IG: <a href='#' class="info-links">sds_official</a></p>
+            <p class="footer-text">X: <a href='#' class="info-links">sds_official</a></p>
+        </div>
+    </div>
+    {% endblock footer %}
+    <!--{{ bootstrap.load_js() }}-->
+</body>
+</html>

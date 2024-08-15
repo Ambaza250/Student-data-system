@@ -1,0 +1,36 @@
+.title{
+    text-align: right;
+    display: block;
+    margin: 0 auto;
+    
+}
+.dash-info{
+    text-align: center;
+    border: solid;
+    align-self:center;
+    width: 300px;
+    border-radius: 10px;
+    height: 350px;
+}
+.dash-cols{
+    padding: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+
+}
+.dash-text{
+    padding: 10px;
+}
+.buttons{
+    padding: 5px;
+    background-color: green;
+    width:200px;
+    border-radius: 10px;
+}
+.log-out-btn{
+    background-color: green;
+    border-radius: 10px;
+}

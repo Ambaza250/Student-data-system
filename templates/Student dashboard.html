@@ -1,0 +1,30 @@
+{%extends "base.html"%}
+{%block head%}
+{{super()}}
+<link rel="stylesheet" href="{{url_for('static',filename='student dashboard.css')}}">
+{%endblock head%}
+{%block content%}
+<h1 class="title"><u>Students Dashboard</u></h1>
+
+<div class="parent">
+    <div class="row show-grid dashboard">
+        <div class="col-lg-4"><p><u><b>first name</b></u></p></div>
+        <div class="col-lg-4"><p><u><b>last name</b></u></p></div>
+        <div class="col-lg-4"><p><u><b>marks</b></u></p></div>
+    </div>
+
+
+        {% for student in students %}
+        <div class="row show-grid dashboard">
+            
+                <div class=" col-lg-4 "><div class="dashboard-show">{{ student.first_name }}</div></div>
+                <div class="col-lg-4"><div class="dashboard-show">{{ student.last_name }}</div></div>
+                <div class="col-lg-4"> <div class="dashboard-show">{{ student.marks }}/100</div></div>
+            </div>   
+        {% endfor %}
+        <form action="{{url_for('dashboard')}}" class="dashboard">
+            <button class="buttons">Back to dashboard</button>
+        </form>
+</div>
+
+{%endblock content%}
